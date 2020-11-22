@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button, Descriptions } from 'antd'
-import { OmitProps } from 'antd/lib/transfer/renderListBody'
 
 function ProductInfo(props) {
 
