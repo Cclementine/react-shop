@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Typography, Button, Form, Input} from 'antd'
+import { Button, Form, Input} from 'antd'
 import FileUpload from '../../utils/FileUpload';
 import Axios from 'axios';
 
@@ -12,7 +12,7 @@ const Continents = [
     { key: 4, value: "North America" },
     { key: 5, value: "South America" },
     { key: 6, value: "Austrailia" },
-    { key: 6, value: "Antarctica" }
+    { key: 7, value: "Antarctica" }
 ]
 
 
@@ -103,9 +103,8 @@ function UploadProductPage(props) {
                 <br />
                 <br />
                 <select onChange={continentChangeHandler}>
-
-                    { Continents.map(item => (
-                        <option key={item.key} value={Continent}> {item.value} </option>
+                    {Continents.map(item => (
+                        <option key={item.key} value={item.key}> {item.value}</option>
                     ))}
                 </select>
                 <br />

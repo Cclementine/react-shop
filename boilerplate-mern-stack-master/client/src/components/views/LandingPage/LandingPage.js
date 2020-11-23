@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaCode } from "react-icons/fa";
 import axios from "axios";
 import { Icon, Col, Card, Row, Carousel } from 'antd';
+import Meta from 'antd/lib/card/Meta';
 import ImageSlider from '../../utils/ImageSlider';
 import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
@@ -69,6 +70,10 @@ function LandingPage() {
                     title={product.title}
                     description={`$${product.price}`}
                 >
+                    <Meta
+                        title={product.tile}
+                        description={`$${product.price}`}
+                    />
                 </Card>
             </Col>
     })
@@ -119,8 +124,8 @@ function LandingPage() {
 
         let body = {
             skip: 0,
-            limit: 8,
-            filter: Filters,
+            limit: Limit,
+            filters: Filters,
             searchTerm: newSearchTerm
         }
 

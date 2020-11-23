@@ -40,7 +40,7 @@ productSchema.index({
     title: 'text',
     description: 'text'
 }, {
-    weight: {
+    weights: {
         title: 5,
         description: 1
     }

@@ -36,18 +36,18 @@ function DetailProductPage(props) {
 
             <br />
 
-          <Row gutter={[16, 16]}>
+            <Row gutter={[16, 16]}>
+                <Col lg={12} sm={24}>
+                    {/* ProductImage */}
+                    <ProductImage detail={Product}/>
+                </Col>
+                <Col lg={12} sm={24}>
+                    {/* ProductInfo */}
+                    <ProductInfo detail={Product} />
+                </Col>
+            </Row>
 
-            <Col lg={12} sm={24}>
-                {/* ProductImage */}
-                <ProductImage detail={Product}/>
-            </Col>
-            <Col lg={12} sm={24}>
-                {/* ProductInfo */}
-                <ProductInfo />
-            </Col>
 
-        </Row>
         </div>
     )
 }
